@@ -47,8 +47,8 @@ while True:
     faces = detector(gray)
     #detected face in faces array
 
-	#code change
-	face_frame = frame.copy()
+    #code change
+    face_frame = frame.copy()
 
     for face in faces:
         x1 = face.left()
