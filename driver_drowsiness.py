@@ -46,13 +46,17 @@ while True:
 
     faces = detector(gray)
     #detected face in faces array
+
+	#code change
+	face_frame = frame.copy()
+
     for face in faces:
         x1 = face.left()
         y1 = face.top()
         x2 = face.right()
         y2 = face.bottom()
 
-        face_frame = frame.copy()
+        #face_frame = frame.copy()
         cv2.rectangle(face_frame, (x1, y1), (x2, y2), (0, 255, 0), 2)
 
         landmarks = predictor(gray, face)
