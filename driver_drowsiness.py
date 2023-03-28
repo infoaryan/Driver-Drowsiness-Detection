@@ -42,6 +42,7 @@ def blinked(a,b,c,d,e,f):
 
 while True:
     _, frame = cap.read()
+    _, face_frame = cap.read()
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
     faces = detector(gray)
